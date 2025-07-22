@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEKRON</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      margin: 0;
+      background-color: #e0e0e0;
+      color: #222;
+       overscroll-behavior: none;
+        overflow-x: hidden;
+    }
+    header {
+      background-color: #f5f5f500;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 0.6px 0.3px rgba(0, 0, 0, 0.293);
+    }
+
+    .logo {
+      font-weight: 300;
+      font-size: 200%;
+      color: #1a1a1a;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 400;
+      font-size: 1rem;
+      margin: 0 3rem;
+    }
+
+    .contenedor-busqueda {
+      position: relative;
+    }
+
+    .contenedor-busqueda input {
+      width: 200px;
+      padding: 0.5rem 2rem 0.5rem 1rem;
+      border: none;
+      border-radius: 12px;
+      background-color: #f5f5f5bd;
+      font-size: 0.95rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.101);
+      color: #222;
+    }
+
+    .contenedor-busqueda img {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .carrusel {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      overflow: visible;
+    }
+
+    .pista-carrusel {
+      display: flex;
+      gap: 2rem;
+      transition: transform 0.8s ease-out;
+    }
+
+    section.destacado {
+      background-color: #f5f5f5bd;
+      padding: 3.5rem 2rem;
+      border-radius: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: normal;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      gap: 2rem;
+      min-width: 100%;
+      box-sizing: border-box;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section.destacado:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .texto-destacado {
+      max-width: 500px;
+      transition: transform 0.4s ease, color 0.4s ease;
+    }
+
+    section.destacado:hover .texto-destacado {
+      color: #000000;
+      transform: translateX(10px);
+    }
+
+    .texto-destacado h1 {
+      font-size: 3rem;
+      margin: 0 0 1rem 0;
+      font-weight: 600;
+    }
+
+    .texto-destacado p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .texto-destacado button {
+      background-color: #f5f5f5;
+      border: none;
+      padding: 0.7rem 1rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .texto-destacado button:hover {
+      background-color: #ddd;
+    }
+
+    .destacado img {
+      width: 500px;
+      max-width: 80%;
+      height: auto;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border-radius: 10px;
+      will-change: transform;
+    }
+
+    section.destacado:hover .destacado img {
+      transform: scale(1.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .boton-carrusel {
+      position: absolute;
+      top: 108%;
+      transform: translateY(-70%);
+      background: transparent;
+      border: none;
+      padding: 1rem;
+      font-size: 3rem;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10;
+      color: rgba(0, 0, 0, 0.15);
+      transition: color 0.3s ease;
+    }
+
+    .boton-carrusel:hover {
+      color: rgba(0, 0, 0, 0.358);
+    }
+
+    .boton-carrusel.izquierda {
+      left: 495px;
+    }
+
+    .boton-carrusel.derecha {
+      right: 490px;
+    }
+
+    footer {
+      background-color: #f5f5f5bd;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.80rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.573);
+    }
+
+    footer .iconos-sociales {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    footer .iconos-sociales img {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        overscroll-behavior: none;
+        overflow-x: hidden;
+      }
+
+      .carrusel {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        overflow: visible;
+        width: 100%;
+      }
+
+      .pista-carrusel {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        transform: none !important; 
+      }
+
+      section.destacado {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1rem;
+        width: 100%;
+        min-width: auto;
+        margin-bottom: 1rem;
+      }
+
+      .texto-destacado {
+        max-width: 100%;
+        order: 1;
+        margin-bottom: 1.5rem;
+      }
+
+      .texto-destacado h1 {
+        font-size: 1.8rem;
+      }
+
+      .destacado img {
+        width: 90%;
+        max-width: 300px;
+        order: 2;
+      }
+
+      .boton-carrusel {
+        display: none;
+      }
+      nav {
+        justify-content: normal;
+        width: 900%;
+        margin-top: 1rem;
+      }
+
+      nav a {
+        margin-left: 1rem;
+        margin-right: 0.5rem;
+      }
+
+      .contenedor-busqueda {
+        margin-top: 1rem;
+        width: 90%;
+      }
+
+      .contenedor-busqueda input {
+        width: 90%;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      footer div,
+      footer p {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TEKRON</div>
+    <nav>
+      <a href="index.html.html">Inicio</a>
+      <a href="Marcas.html">Marcas</a>
+      <a href="popular.html">Popular</a>
+      <a href="soporte.html">Soporte</a>
+    </nav>
+    <div class="contenedor-busqueda">
+      <input type="text" placeholder="Buscar" />
+      <img src="img/R.png" alt="Buscar" />
+    </div>
+  </header>
+
+  <main>
+    <div class="carrusel">
+      <button class="boton-carrusel izquierda" onclick="moverCarrusel(-1)">‹</button>
+      <div class="pista-carrusel">
+        <section class="destacado">
+          <div class="texto-destacado">
+            <h1>Tu nueva era de velocidad, estilo y poder</h1>
+            <p>Laptops que combinan estilo, poder y conciencia.</p>
+            <a href="popular.html"><button>Ver Laptops</button></a>
+          </div>
+          <img src="img/laptop1.png" alt="Laptop 1">
+        </section>
+
+        <section class="destacado">
+          <div class="texto-destacado">
+            <h1>Eleva tu experiencia, rompe los límites</h1>
+            <p>Juega con elegancia. Rinde al máximo. Cuida el planeta</p>
+            <a href="http://127.0.0.1:5501/Marcas.html"><button>Ver Marcas</button></a>
+          </div>
+          <img src="img/macbook-pro-16-pulgadas-con-chip-m4-plata-removebg-preview.png" alt="Laptop 2">
+        </section>
+
+        <section class="destacado">
+          <div class="texto-destacado">
+            <h1>Redefine lo que una laptop puede hacer</h1>
+            <p>Elegancia gamer con propósito. Juega bien, vive mejor.</p>
+            <a href="http://127.0.0.1:5501/Marcas.html"><button>Ver Marcas</button></a>
+          </div>
+          <img src="img/c566340e-f00a-4837-8365-7b19963db711-Picsart-BackgroundRemover.png" alt="Laptop 3">
+        </section>
+      </div>
+      <button class="boton-carrusel derecha" onclick="moverCarrusel(1)">›</button>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <p>ㅤㅤㅤSíguenos</p>
+      <div class="iconos-sociales">
+        <a href="#"><img src="img/iconoir--youtube-solid.svg" alt="YouTube" /></a>
+        <a href="#"><img src="img/ic--baseline-tiktok.svg" alt="TikTok" /></a>
+        <a href="#"><img src="img/devicon--twitter.svg" alt="Twitter" /></a>
+        <a href="https://www.instagram.com/d4vid_1912/" target="_blank">
+          <img src="img/fe--instagram.svg" alt="Instagram" />
+        </a>
+      </div>
+    </div>
+
+    <p>Copyright © 2025–2077 TEKRON Technologies. Todos los derechos reservados.</p>
+
+    <div style="text-align: right;">
+      <p>Correo: soporte@tekron.com</p>
+      <p>Teléfono: +503–1234–5678</p>
+      <p>Horario: Lun–Vie, 8am – 5pm</p>
+    </div>
+  </footer>
+
+  <script>
+    let diapositivaActual = 0;
+    function moverCarrusel(direccion) {
+      const pista = document.querySelector(".pista-carrusel");
+      const total = document.querySelectorAll(".pista-carrusel .destacado").length;
+
+      diapositivaActual += direccion;
+      if (diapositivaActual < 0) diapositivaActual = total - 1;
+      if (diapositivaActual >= total) diapositivaActual = 0;
+
+      pista.style.transform = `translateX(-${diapositivaActual * 100}%)`;
+    }
+
+    const campoBusqueda = document.querySelector('.contenedor-busqueda input');
+    const iconoBusqueda = document.querySelector('.contenedor-busqueda img');
+
+    function ejecutarBusqueda() {
+      const consulta = campoBusqueda.value.trim();
+      if (consulta) {
+        window.location.href = `resultados.html?busqueda=${encodeURIComponent(consulta)}`;
+      }
+    }
+
+    campoBusqueda.addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        ejecutarBusqueda();
+      }
+    });
+
+    iconoBusqueda.addEventListener('click', ejecutarBusqueda);
+  </script>
+</body>
+</html>

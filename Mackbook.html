@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEKRON - MacBook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      margin: 0;
+      background-color: #e0e0e0;
+      color: #222;
+       overscroll-behavior: none;
+    }
+
+    header {
+      background-color: transparent;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 0.6px 0.3px rgba(0, 0, 0, 0.293);
+    }
+
+    .logo {
+      font-weight: 300;
+      font-size: 200%;
+      color: #1a1a1a;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 400;
+      font-size: 1rem;
+      margin: 0 3rem;
+    }
+
+    .search-container input {
+      width: 200px;
+      padding: 0.5rem 2rem 0.5rem 1rem;
+      border: none;
+      border-radius: 12px;
+      background-color: #f5f5f5bd;
+      font-size: 0.95rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.101);
+      color: #222;
+    }
+
+    main {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .product-card {
+      background-color: #f5f5f5bd;
+      padding: 3rem;
+      border-radius: 16px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .product-card:hover {
+      transform: scale(1.01);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .product-card img {
+      width: 280px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .text-info h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .text-info p {
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .product-card {
+        flex-direction: column;
+        text-align: center;
+        height: auto; /* Para que las tarjetas no tengan altura fija */
+        padding: 0rem;
+        max-width: 100%; /* Que use todo el ancho posible */
+      }
+
+      .product-card img {
+        margin: 0 0 1rem 0;
+        max-width: 100%;
+        height: auto;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      nav a {
+        margin: 0.5rem 1rem; /* Espaciado un poco más compacto */
+        font-size: 0.95rem; /* Tamaño de texto un poco más pequeño para móviles */
+      }
+
+      .search-container {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .search-container input {
+        width: 90%;
+        max-width: 400px; /* Para que no se extienda demasiado en pantallas grandes */
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem; /* Separación entre bloques */
+      }
+
+      footer > div, footer p {
+        width: 100%;
+      }
+
+      .social-icons a img {
+        height: 24px; /* Iconos un poco más grandes para tocar mejor */
+        margin-right: 12px;
+      }
+    }
+
+    footer {
+      background-color: #f5f5f5bd;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.15);
+      margin-top: 2rem;
+    }
+
+    footer .social-icons {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    footer .social-icons img {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TEKRON</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="Marcas.html">Marcas</a>
+      <a href="popular.html">Popular</a>
+      <a href="soporte.html">Soporte</a>
+    </nav>
+    <div class="search-container">
+      <input type="text" placeholder="Buscar" />
+    </div>
+  </header>
+
+  <main>
+    <!-- LOGO Apple -->
+    <img src="img/Apple1.png" alt="Logo Apple" style="width: 80px; margin-bottom: 1rem;" />
+
+    <!-- Productos Apple -->
+    <a href="applelaptops.html/mac1.html" class="product-card">
+      <img src="img/10.png" alt="MacBook Pro 16” M2 Max" />
+      <div class="text-info">
+        <h2>MacBook Pro 16” M2 Max</h2>
+        <p>La MacBook más poderosa hasta ahora. Creada para profesionales que no aceptan límites. Diseño elegante con rendimiento imparable. Perfecta para creadores, desarrolladores y visionarios.</p>
+      </div>
+    </a>
+
+    <a href="applelaptops.html/mac2.html" class="product-card">
+      <img src="img/8.png" alt="MacBook Pro 14” M4 Max" />
+      <div class="text-info">
+        <h2>MacBook Pro 14” M4 Max</h2>
+        <p>Toda la potencia profesional en un formato compacto. Ideal para llevar grandes ideas a cualquier parte. Rinde al máximo en cada proyecto sin importar el lugar.</p>
+      </div>
+    </a>
+
+    <a href="applelaptops.html/mac3.html" class="product-card">
+      <img src="img/16.png" alt="MacBook Pro 16” M4 Pro" />
+      <div class="text-info">
+        <h2>MacBook Pro 16” M4 Pro</h2>
+        <p>Una herramienta seria para gente seria. Conquista tu día con fluidez, estilo y potencia. Ideal para largas jornadas de creación y enfoque. Un portátil que se siente como una estación de trabajo.</p>
+      </div>
+    </a>
+
+    <a href="applelaptops.html/mac4.html" class="product-card">
+      <img src="img/9.png" alt="MacBook Pro 14” M4 Pro" />
+      <div class="text-info">
+        <h2>MacBook Pro 14” M4 Pro</h2>
+        <p>Tu nuevo aliado para trabajar, crear y avanzar. Ligera, rápida y con un diseño que inspira. Perfecta para quienes se mueven sin bajar el ritmo. Haz multitarea, crea contenido, fluye sin esfuerzo.</p>
+      </div>
+    </a>
+
+    <a href="applelaptops.html/mac5.html" class="product-card">
+      <img src="img/12.png" alt="MacBook Air 15” M4" />
+      <div class="text-info">
+        <h2>MacBook Air 15” M4</h2>
+        <p>Tan ligera como poderosa. Ideal para estudiantes, emprendedores y creativos. Diseño silencioso, moderno y listo para todo. Rinde con estilo desde donde tú quieras.</p>
+      </div>
+    </a>
+  </main>
+
+  <footer>
+    <div>
+      <p>Síguenos</p>
+      <div class="social-icons">
+        <a href="#"><img src="img/iconoir--youtube-solid.svg" alt="YouTube" /></a>
+        <a href="#"><img src="img/ic--baseline-tiktok.svg" alt="TikTok" /></a>
+        <a href="#"><img src="img/devicon--twitter.svg" alt="Twitter" /></a>
+        <a href="#"><img src="img/uil--facebook.svg" alt="Facebook" /></a>
+      </div>
+    </div>
+
+    <p>Copyright © 2025–2077 TEKRON Technologies. Todos los derechos reservados.</p>
+
+    <div style="text-align: right;">
+      <p>Correo: soporte@tekron.com</p>
+      <p>Teléfono: +503–1234–5678</p>
+      <p>Horario: Lun–Vie, 8am – 5pm</p>
+    </div>
+  </footer>
+  <script>
+  const searchInput = document.querySelector('.search-container input');
+  const searchIcon = document.querySelector('.search-container img');
+
+  function ejecutarBusqueda() {
+    const query = searchInput.value.trim();
+    if (query) {
+      window.location.href = `resultados.html?busqueda=${encodeURIComponent(query)}`;
+    }
+  }
+
+  searchInput.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      ejecutarBusqueda();
+    }
+  });
+
+  searchIcon.addEventListener('click', ejecutarBusqueda);
+</script>
+
+</body>
+</html>

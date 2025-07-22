@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEKRON - Lenovo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      margin: 0;
+      background-color: #e0e0e0;
+      color: #222;
+       overscroll-behavior: none;
+       
+    }
+
+    header {
+      background-color: transparent;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 0.6px 0.3px rgba(0, 0, 0, 0.293);
+    }
+
+    .logo {
+      font-weight: 300;
+      font-size: 200%;
+      color: #1a1a1a;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 400;
+      font-size: 1rem;
+      margin: 0 3rem;
+    }
+
+    .search-container input {
+      width: 200px;
+      padding: 0.5rem 2rem 0.5rem 1rem;
+      border: none;
+      border-radius: 12px;
+      background-color: #f5f5f5bd;
+      font-size: 0.95rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.101);
+      color: #222;
+    }
+
+    main {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    a.product-link {
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .product-card {
+      background-color: #f5f5f5bd;
+      padding: 3rem;
+      border-radius: 16px;
+      width: 100%;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.01);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .product-card img {
+      width: 280px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .text-info h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .text-info p {
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .product-card {
+        flex-direction: column;
+        text-align: center;
+        height: auto; /* Para que las tarjetas no tengan altura fija */
+        padding: 1rem;
+        max-width: 100%; /* Que use todo el ancho posible */
+      }
+
+      .product-card img {
+        margin: 0 0 1rem 0;
+        max-width: 100%;
+        height: auto;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      nav a {
+        margin: 0.5rem 1rem; /* Espaciado un poco más compacto */
+        font-size: 0.95rem; /* Tamaño de texto un poco más pequeño para móviles */
+      }
+
+      .search-container {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .search-container input {
+        width: 90%;
+        max-width: 400px; /* Para que no se extienda demasiado en pantallas grandes */
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem; /* Separación entre bloques */
+      }
+
+      footer > div, footer p {
+        width: 100%;
+      }
+
+      .social-icons a img {
+        height: 24px; /* Iconos un poco más grandes para tocar mejor */
+        margin-right: 12px;
+      }
+    }
+
+    footer {
+      background-color: #f5f5f5bd;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.15);
+      margin-top: 2rem;
+    }
+
+    footer .social-icons {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    footer .social-icons img {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TEKRON</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="Marcas.html">Marcas</a>
+      <a href="popular.html">Popular</a>
+      <a href="soporte.html">Soporte</a>
+    </nav>
+    <div class="search-container">
+      <input type="text" placeholder="Buscar" />
+    </div>
+  </header>
+
+  <main>
+    <img src="img/Lenovo1.png" alt="Logo Lenovo" style="width: 100px; margin-bottom: 1rem;" />
+
+    <a class="product-link" href="lenovo/lenovo1.html">
+      <div class="product-card">
+        <img src="img/17.png" alt="ThinkPad X1 Carbon Gen13">
+        <div class="text-info">
+          <h2>Lenovo ThinkPad X1 Carbon Gen13 Aura Edition</h2>
+          <p>La expresión máxima de elegancia y ligereza. Lista para potenciar cada jornada profesional. Su teclado legendario inspira confianza y precisión.</p>
+        </div>
+      </div>
+    </a>
+
+    <a class="product-link" href="lenovo/legionpro7igen9.html">
+      <div class="product-card">
+        <img src="img/2.png" alt="Legion Pro 7i Gen9">
+        <div class="text-info">
+          <h2>Lenovo Legion Pro 7i Gen 9</h2>
+          <p>Potencia de juego que desafía lo imposible. Experiencias inmersivas sin pausas ni límites. Diseño robusto que aguanta sesiones maratónicas.</p>
+        </div>
+      </div>
+    </a>
+
+    <a class="product-link" href="lenovo/legion9i.html">
+      <div class="product-card">
+        <img src="img/image 12.png" alt="Lenovo Legion 9i">
+        <div class="text-info">
+          <h2>Lenovo Legion 9i</h2>
+          <p>Futuro del gaming y la creación combinados. Pantalla 3D sin gafas para máximo impacto visual. Diseño audaz con teclado mecánico RGB. Para quienes buscan la punta de la innovación.</p>
+        </div>
+      </div>
+    </a>
+
+    <a class="product-link" href="lenovo/yoga9igen9.html">
+      <div class="product-card">
+        <img src="img/image 13.png" alt="Lenovo Yoga 9i Gen9">
+        <div class="text-info">
+          <h2>Lenovo Yoga 9i Gen 9</h2>
+          <p>Versatilidad creativa al alcance de tu mano. Convierte cada idea en arte con estilo convertible. Diseño premium y experiencia multimedia envolvente. Perfecto para inspirar tu creatividad en cualquier lugar.</p>
+        </div>
+      </div>
+    </a>
+
+    <a class="product-link" href="lenovo/thinkpadp1gen7.html">
+      <div class="product-card">
+        <img src="img/image 14.png" alt="ThinkPad P1 Gen 7">
+        <div class="text-info">
+          <h2>Lenovo ThinkPad P1 Gen 7</h2>
+          <p>Estación de trabajo móvil para profesionales exigentes. Rendimiento profesional sin renunciar a portabilidad. Listo para manejar proyectos intensivos con fluidez. Diseño robusto y confiable para el día a día.</p>
+        </div>
+      </div>
+    </a>
+  </main>
+
+  <footer>
+    <div>
+      <p>Síguenos</p>
+      <div class="social-icons">
+        <a href="#"><img src="img/iconoir--youtube-solid.svg" alt="YouTube" /></a>
+        <a href="#"><img src="img/ic--baseline-tiktok.svg" alt="TikTok" /></a>
+        <a href="#"><img src="img/devicon--twitter.svg" alt="Twitter" /></a>
+        <a href="#"><img src="img/uil--facebook.svg" alt="Facebook" /></a>
+      </div>
+    </div>
+
+    <p>Copyright © 2025–2077 TEKRON Technologies. Todos los derechos reservados.</p>
+
+    <div style="text-align: right;">
+      <p>Correo: soporte@tekron.com</p>
+      <p>Teléfono: +503–1234–5678</p>
+      <p>Horario: Lun–Vie, 8am – 5pm</p>
+    </div>
+  </footer>
+  <script>
+  const searchInput = document.querySelector('.search-container input');
+  const searchIcon = document.querySelector('.search-container img');
+
+  function ejecutarBusqueda() {
+    const query = searchInput.value.trim();
+    if (query) {
+      window.location.href = `resultados.html?busqueda=${encodeURIComponent(query)}`;
+    }
+  }
+
+  searchInput.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      ejecutarBusqueda();
+    }
+  });
+
+  searchIcon.addEventListener('click', ejecutarBusqueda);
+</script>
+
+</body>
+</html>

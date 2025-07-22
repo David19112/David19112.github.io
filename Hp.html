@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEKRON - HP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      margin: 0;
+      background-color: #e0e0e0;
+      color: #222;
+       overscroll-behavior: none;
+    }
+
+    header {
+      background-color: transparent;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 0.6px 0.3px rgba(0, 0, 0, 0.293);
+    }
+
+    .logo {
+      font-weight: 300;
+      font-size: 200%;
+      color: #1a1a1a;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 400;
+      font-size: 1rem;
+      margin: 0 3rem;
+    }
+
+    .search-container input {
+      width: 200px;
+      padding: 0.5rem 2rem 0.5rem 1rem;
+      border: none;
+      border-radius: 12px;
+      background-color: #f5f5f5bd;
+      font-size: 0.95rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.101);
+      color: #222;
+    }
+
+    main {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .product-card {
+      background-color: #f5f5f5bd;
+      padding: 3rem;
+      border-radius: 16px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .product-card:hover {
+      transform: scale(1.01);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .product-card img {
+      width: 280px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .text-info h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .text-info p {
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .product-card {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 1rem;
+        max-width: 100%;
+      }
+
+      .product-card img {
+        margin: 0 0 1rem 0;
+        max-width: 100%;
+        height: auto;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      nav a {
+        margin: 0.5rem 1rem;
+        font-size: 0.95rem;
+      }
+
+      .search-container {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .search-container input {
+        width: 90%;
+        max-width: 400px;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      footer > div, footer p {
+        width: 100%;
+      }
+
+      .social-icons a img {
+        height: 24px;
+        margin-right: 12px;
+      }
+    }
+
+    footer {
+      background-color: #f5f5f5bd;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.15);
+      margin-top: 2rem;
+    }
+
+    footer .social-icons {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    footer .social-icons img {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TEKRON</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="Marcas.html">Marcas</a>
+      <a href="popular.html">Popular</a>
+      <a href="soporte.html">Soporte</a>
+    </nav>
+    <div class="search-container">
+      <input type="text" placeholder="Buscar" />
+    </div>
+  </header>
+
+  <main>
+    <!-- LOGO HP -->
+    <img src="img/Hp1.png" alt="Logo HP" style="width: 80px; margin-bottom: 1rem;" />
+
+    <!-- Productos HP -->
+    <a href="hplaptops/360.html" class="product-card">
+      <img src="img/7.png" alt="HP Spectre x360 Convertible">
+      <div class="text-info">
+        <h2>HP Spectre x360 Convertible</h2>
+        <p>Diseño que inspira. Rendimiento que deslumbra. Luce profesional, trabaja con fluidez y crea sin límites. El Spectre x360 combina elegancia y potencia en un convertible premium que se adapta a ti.</p>
+      </div>
+    </a>
+
+    <a href="hplaptops/omen-transcend-16.html" class="product-card">
+      <img src="img/13.png" alt="OMEN Transcend 16">
+      <div class="text-info">
+        <h2>OMEN Transcend 16</h2>
+        <p>Juega con todo. Crea sin frenos. Una bestia disfrazada de laptop elegante. El poder de los gamers y creadores reunido en un diseño ligero, silencioso y sorprendentemente profesional.</p>
+      </div>
+    </a>
+
+    <a href="hplaptops/Furyg10.html" class="product-card">
+      <img src="img/6.png" alt="HP ZBook Fury G10">
+      <div class="text-info">
+        <h2>HP ZBook Fury G10</h2>
+        <p>Versatilidad creativa al alcance de tu mano. Convierte cada idea en arte con estilo convertible. Diseño premium y experiencia multimedia envolvente. Perfecta para inspirar tu creatividad en cualquier lugar.</p>
+      </div>
+    </a>
+
+    <a href="hplaptops/dragonfly.html" class="product-card">
+      <img src="img/11.png" alt="HP Elite Dragonfly G4">
+      <div class="text-info">
+        <h2>HP Elite Dragonfly G4</h2>
+        <p>Ligera como una pluma. Sólida como un trato cerrado. Diseñada para líderes. Viaja con estilo, presenta con impacto y trabaja con seguridad en cualquier parte del mundo.</p>
+      </div>
+    </a>
+
+    <a href="hplaptops/hpvictus16.html" class="product-card">
+      <img src="img/3.png" alt="HP Victus 16">
+      <div class="text-info">
+        <h2>Hp Victus 16</h2>
+        <p>El HP Victus 16 es una laptop gaming de gama media-alta que ofrece un excelente equilibrio entre rendimiento y precio. A continuación, te presenta las especificaciones de su configuración más potente disponible en 2025.</p>
+      </div>
+    </a>
+  </main>
+
+  <footer>
+    <div>
+      <p>Síguenos</p>
+      <div class="social-icons">
+        <a href="#"><img src="img/iconoir--youtube-solid.svg" alt="YouTube" /></a>
+        <a href="#"><img src="img/ic--baseline-tiktok.svg" alt="TikTok" /></a>
+        <a href="#"><img src="img/devicon--twitter.svg" alt="Twitter" /></a>
+        <a href="#"><img src="img/uil--facebook.svg" alt="Facebook" /></a>
+      </div>
+    </div>
+
+    <p>Copyright © 2025–2077 TEKRON Technologies. Todos los derechos reservados.</p>
+
+    <div style="text-align: right;">
+      <p>Correo: soporte@tekron.com</p>
+      <p>Teléfono: +503–1234–5678</p>
+      <p>Horario: Lun–Vie, 8am – 5pm</p>
+    </div>
+  </footer>
+  <script>
+  const searchInput = document.querySelector('.search-container input');
+  const searchIcon = document.querySelector('.search-container img');
+
+  function ejecutarBusqueda() {
+    const query = searchInput.value.trim();
+    if (query) {
+      window.location.href = `resultados.html?busqueda=${encodeURIComponent(query)}`;
+    }
+  }
+
+  searchInput.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      ejecutarBusqueda();
+    }
+  });
+
+  searchIcon.addEventListener('click', ejecutarBusqueda);
+</script>
+
+</body>
+</html>
